@@ -74,7 +74,7 @@ public struct LineLengthRule: ConfigurationProviderRule {
             strippedString = stripLiterals(fromSourceString: strippedString,
                                            withDelimiter: "#imageLiteral")
 
-            let length = strippedString.characters.count
+            let length = strippedString.count
 
             for param in configuration.params where length > param.value {
                 let reason = "Line should be \(configuration.length.warning) characters or less: " +
